@@ -1,5 +1,8 @@
 package org.example;
 
+import java.lang.reflect.Type;
+import java.util.*;
+
 public class Problems {
 
     /***
@@ -13,7 +16,9 @@ public class Problems {
         return result;
     }
 
-    /*** Write a function that takes in a string of one or more words, and returns the same string, but with all words that have five or more letters reversed
+    /*** Write a function that takes in a string of one or more words,
+     * and returns the same string, but with all words that have five
+     * or more letters reversed.
      *
      * @param sentence
      * @return result
@@ -46,5 +51,19 @@ public class Problems {
         return result;
     }
 
-
+    /***
+     *  ctakes a list of non-negative integers and strings and returns
+     *  a new list with the strings filtered out.
+     * @param list
+     * @return resultList
+     */
+    public static List<Object> filterList(final List<Object> list) {
+        List<Object> resultList = new ArrayList<>();
+        for(Object item : list){
+            if(item.getClass().equals(Integer.class)){
+                resultList.add(item);
+            }
+        }
+        return resultList;
+    }
 }

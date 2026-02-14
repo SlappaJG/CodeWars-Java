@@ -1,6 +1,9 @@
 import org.example.Problems;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CodeWarsProblemsTest {
@@ -11,7 +14,7 @@ public class CodeWarsProblemsTest {
     void setUp() {
         // This method runs before each @Test method
         problems = new Problems();
-        System.out.println("Initializing Calculator...");
+        System.out.println("Initializing Problems object...");
     }
 
     @Test
@@ -23,6 +26,12 @@ public class CodeWarsProblemsTest {
         String result = problems.repeatStr(repeat, str);
 
         assertEquals(expected, result);
+    }
+
+    @Test
+    public void TestFilterList()
+    {
+        assertEquals(List.of(1, 2), problems.filterList(List.of(1, 2, "a", "b")), "For input: [1, 2, \"a\", \"b\"]");
     }
 
 }
