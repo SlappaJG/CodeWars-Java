@@ -10,19 +10,9 @@ import java.util.stream.IntStream;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-//        Problems testProblems = new Problems();
-//
-//       String result = testProblems.spinWords("Tests and no changes");
-//        System.out.printf("Result: %s", result);
-        List<Object> testList = new ArrayList<>();
-        testList.add(123);
-        testList.add("test");
+        Problems testProblems = new Problems();
 
-        for(Object item : testList){
-            System.out.println("Item: " + item);
-            System.out.println("Item Class: " + item.getClass());
-        }
-
-
+       String result = testProblems.pigIt("O tempora o mores !");
+        System.out.printf("Result: %s\n", result);
     }
 }
