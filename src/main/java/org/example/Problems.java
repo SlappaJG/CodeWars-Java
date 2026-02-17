@@ -141,4 +141,24 @@ public class Problems {
         return resultSentence;
     }
 
+    /***
+     * Write a function that takes an integer as input, and returns the number of bits
+     * that are equal to one in the binary representation of that number.
+     * You can guarantee that input is non-negative.
+     * @param n
+     * @return resultSum
+     */
+    public static int countBits(int n){
+        int resultSum = 0;
+        String bitString = Integer.toBinaryString(n);
+
+        char[] bits = bitString.toCharArray();
+        for(char bit : bits){
+            if(bit == '1'){
+                resultSum++;
+            }
+        }
+        return resultSum;
+    }
+
 }

@@ -56,4 +56,14 @@ public class CodeWarsProblemsTest {
         assertEquals("hisTay siay ymay tringsay", problems.pigIt("This is my string"));
     }
 
+    @Test
+    void testBitCounting(){
+        assertEquals(5, problems.countBits(1234));
+        assertEquals(1, problems.countBits(4));
+        assertEquals(3, problems.countBits(7));
+        assertEquals(2, problems.countBits(9));
+        assertEquals(2, problems.countBits(10));
+    }
+
+
 }

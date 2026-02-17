@@ -11,8 +11,18 @@ import java.util.stream.IntStream;
 public class Main {
     public static void main(String[] args) {
         Problems testProblems = new Problems();
-
-       String result = testProblems.pigIt("O tempora o mores !");
-        System.out.printf("Result: %s\n", result);
+//
+//       String result = testProblems.pigIt("O tempora o mores !");
+//        System.out.printf("Result: %s\n", result);
+        int activeCount = 0;
+        int number = 5;
+        String bitString = Integer.toBinaryString(number);
+        char[] bits = bitString.toCharArray();
+        for(char bit : bits){
+            System.out.println("bit: " + bit);
+            if(bit == '1'){
+                activeCount++;
+            }
+        }
     }
 }
