@@ -65,5 +65,12 @@ public class CodeWarsProblemsTest {
         assertEquals(2, problems.countBits(10));
     }
 
+    @Test
+    void testIsNarcissistic(){
+        assertTrue(problems.isNarcissistic(153), "153 is narcissistic");
+        assertTrue(problems.isNarcissistic(1634), "1634 is narcissistic");
+        assertFalse(problems.isNarcissistic(112), "112 is not narcissistic");
+    }
+
 
 }
